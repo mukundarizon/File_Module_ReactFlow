@@ -1,0 +1,98 @@
+.node-wrapper-field {
+  height: 40px;
+  margin-top: 15px;
+  text-align: left;
+  background: white;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.node-wrapper-field h6 {
+  margin-left: 10px;
+  font-size: 22px;
+  margin-top: 8px;
+}
+
+.node-wrapper-field span {
+  padding-left: 15px;
+}
+
+.node-wrapper-field:hover {
+  border: 1px solid rgb(16, 209, 103);
+  cursor: pointer;
+}
+
+.node-fields .div-node {
+  background: #fff;
+  border: 1px solid black;
+  width: 90%;
+  height: 50px;
+  padding-right: 5px;
+  padding-left: 5px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.node-fields .div-node h3 {
+  font-size: 16px;
+}
+
+.no-click {
+  cursor: not-allowed;
+}
+
+.node-fields .div-node button {
+  float: right;
+  margin-top: -45px;
+}
+
+.sidebar-create-node {
+  width: 260px;
+  min-width: 260px;
+  border-left: 1px solid #d3dce0;
+  background-color: #f7f9fa;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-create-node .add-project-2 {
+  background: #ff7a00;
+  text-decoration: none;
+  padding: 15px;
+  padding-right: 65px;
+  padding-left: 65px;
+  color: white;
+  border-radius: 5px;
+  font-weight: normal;
+}
+
+.project-details {
+  display: flex;
+}
+
+.project-details p {
+  margin-left: 20px;
+  margin-top: 30px;
+}
+
+.project-details .add-project-3 {
+  width: 59px;
+  height: 25px;
+  text-decoration: underline;
+  background: transparent;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 30px;
+  color: #000000;
+  margin-top: 30px;
+  margin-left: 40px;
+  height: 40px;
+}
+
+.delete {
+  border-radius: 5px;
+  background: #f0123a;
+  color: #fff;
+  font-weight: normal;
+}

@@ -1,0 +1,52 @@
+{
+  "name": "basic",
+  "version": "0.1.0",
+  "homepage": "./",
+  "private": true,
+  "dependencies": {
+    "@rooks/use-undo-state": "^4.11.0",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@use-it/event-listener": "^0.1.6",
+    "bootstrap": "^4.6.0",
+    "firebase": "^8.3.1",
+    "node-sass": "^4.14.1",
+    "re-resizable": "^6.9.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-flow-renderer": "^9.0.1",
+    "react-icons": "^3.10.0",
+    "react-intl": "^4.5.2",
+    "react-pro-sidebar": "^0.4.4",
+    "react-resizable-rotatable-draggable": "^0.2.0",
+    "react-rnd": "^10.2.4",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^2.0.5",
+    "react-switch": "^5.0.1",
+    "react-syntax-highlighter": "^15.4.3",
+    "reactjs-popup": "^2.0.4",
+    "use-undo": "^1.0.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

@@ -1,0 +1,605 @@
+.grid {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-auto-flow: row dense;
+}
+
+.item {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 0.25em;
+  height: 100vh;
+}
+
+.large {
+  background: rgba(255, 0, 0, 0.25);
+  grid-column: auto / span 2;
+  grid-row: auto / span 11;
+}
+
+.rect {
+  border-bottom: 2px solid rgb(4, 122, 122);
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+
+.lables {
+  padding-top: 20px;
+}
+
+.item-1 {
+  padding-left: 20px;
+  padding-right: 20px;
+  overflow: hidden;
+}
+
+button {
+  background: #ff7a00;
+  color: white;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 5px;
+  margin-left: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: normal;
+}
+
+label {
+  font-size: 16px;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 8px;
+  border-radius: 5px;
+  margin-left: 10px;
+  background: #efefef;
+}
+
+textarea {
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  background: #efefef;
+}
+
+.Add .rect {
+  margin-top: 10px;
+  border-bottom: 2px solid rgb(3, 145, 114);
+  padding-bottom: 20px;
+}
+
+.Add .rect h4 {
+  text-align: center;
+}
+
+.updatenode__cont label {
+  display: block;
+}
+
+aside {
+  text-align: center !important;
+}
+
+aside .codeNodeMain {
+  text-align: left !important;
+  width: 90%;
+  margin-left: 5px;
+}
+
+aside .updatenode__bglabel {
+  margin-top: 10px;
+}
+
+/* .checkboxwrapper {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+} */
+
+.checkboxwrapper input {
+  margin-top: -7px;
+}
+
+.btn-save {
+  margin-top: 20px;
+}
+
+.save {
+  background: #ff7a00;
+  color: white;
+  font-size: 20px;
+  width: 90%;
+  margin-top: 5px;
+  border-radius: 5px;
+  font-weight: normal;
+}
+
+.back {
+  background: #ff7a00;
+  color: white;
+  font-size: 18px;
+  width: 90%;
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.back-button {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.side {
+  display: block;
+}
+
+.dndflow {
+  flex-direction: column;
+  display: flex;
+  height: 100%;
+}
+
+.dndflow aside {
+  border-right: 1px solid #eee;
+  padding: 15px 10px;
+  font-size: 12px;
+  background: #fcfcfc;
+  overflow-y: auto;
+}
+
+.dndflow aside .description {
+  margin-bottom: 10px;
+}
+
+.code {
+  margin-top: 10px;
+  border: 1px solid#448805;
+  height: 100px;
+  flex-direction: row;
+}
+
+.dndflow .dndnode {
+  height: 20px;
+  padding: 4px;
+  border: 1px solid #1a192b;
+  border-radius: 2px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: grab;
+  background: #cccccc;
+}
+
+.dndflow .dndnode.circle {
+  border-color: #0041d0;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  margin-left: 60px;
+  background: #cccccc;
+}
+
+.code3 {
+  margin-top: 10px;
+  border: 1px solid #2ac2ba;
+  padding-bottom: 10px;
+  height: 200px;
+  background: #cccccc;
+}
+
+.code4 {
+  margin-top: 10px;
+  border: 1px solid #2ac2ba;
+  padding-bottom: 10px;
+  height: 200px;
+}
+
+.code5 {
+  margin-top: 10px;
+  border: 1px solid #2ac2ba;
+  padding-bottom: 10px;
+  height: 120px;
+  background: #cccccc;
+}
+
+.code8 {
+  margin-top: 10px;
+  border: 1px solid #2ac2ba;
+  padding-bottom: 10px;
+  height: 140px;
+  background: #cccccc;
+}
+
+.code10 {
+  margin-top: 10px;
+  border: 1px solid #2ac2ba;
+  padding-bottom: 10px;
+  height: 220px;
+  background: #cccccc;
+}
+
+.code10 img {
+  width: 50px;
+  height: 50px;
+  margin-top: 10px;
+}
+
+.code12 {
+  margin-top: 10px;
+  border: 1px solid #2ac2ba;
+  padding-bottom: 10px;
+  height: 240px;
+  background: #cccccc;
+}
+
+.code10 p {
+  text-align: center;
+}
+
+.code11 {
+  margin-top: 10px;
+  border: 1px solid #2ac2ba;
+  padding-bottom: 10px;
+  height: 240px;
+  background: #cccccc;
+}
+
+.code11 img {
+  width: 50px;
+  height: 50px;
+}
+
+.code10 p {
+  text-align: center;
+}
+
+.code8 img {
+  width: 50px;
+  height: 50px;
+  margin-top: 10px;
+}
+
+.code8 textarea {
+  margin-top: 5px;
+}
+
+.code6 {
+  margin-top: 10px;
+  border: 1px solid #2ac2ba;
+  padding-bottom: 10px;
+  height: 170px;
+  background: #cccccc;
+}
+.code6 p {
+  text-align: center;
+}
+
+.code6 img {
+  width: 50px;
+  height: 50px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.code5 p {
+  text-align: center;
+}
+
+.code4 p {
+  text-align: center;
+}
+
+.code4 textarea {
+  margin-top: 10px;
+  text-align: center;
+  flex-direction: row;
+}
+
+.code4 img {
+  width: 50px;
+  height: 50px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.code {
+  margin-top: 10px;
+  border: 1px solid #2ac2ba;
+  padding-bottom: 10px;
+  height: 100px;
+  background: #cccccc;
+}
+
+.code2 {
+  margin-top: 10px;
+  border: 1px solid #2ac2ba;
+  padding-bottom: 10px;
+  height: 150px;
+  background: #cccccc;
+}
+
+.dndflow .dndnode.square {
+  height: 100px;
+  width: 100px;
+  background: #cccccc;
+}
+
+.dndflow .dndnode.output {
+  margin-top: 10px;
+  border-color: #ff0072;
+  background: #cccccc;
+}
+
+.dndflow .dndnode.custom {
+  border-color: #ff0072;
+  background: #cccccc;
+}
+
+.dndflow .dndnode.only-image {
+  margin-top: 10px;
+  border-color: #ff0072;
+  background: #cccccc;
+}
+
+.dndflow .reactflow-wrapper {
+  flex-grow: 1;
+  height: 100%;
+}
+
+.image {
+  border: 1px solid#0779a7;
+  height: 100px;
+  flex-direction: row;
+  text-align: center;
+  margin-top: 10px;
+  background: #cccccc;
+}
+
+.image img {
+  width: 50px;
+  height: 50px;
+}
+
+.custom {
+  margin-top: 10px;
+  border: 1px solid#0779a7;
+  height: 150px;
+  flex-direction: row;
+  text-align: center;
+  background: #cccccc;
+}
+
+.custom img {
+  width: 50px;
+  height: 50px;
+}
+
+.custom-2 {
+  margin-top: 10px;
+  border: 1px solid#0779a7;
+  height: 100px;
+  padding: 20px;
+  flex-direction: row;
+  text-align: center;
+  background: #cccccc;
+}
+
+.custom-2 img {
+  width: 50px;
+  height: 50px;
+}
+
+.textfield2 {
+  margin-top: 10px;
+  border: 1px solid#1be7d6;
+  height: 50px;
+  padding-bottom: 10px;
+  flex-direction: row;
+  text-align: center;
+}
+
+.textfield3 {
+  margin-top: 10px;
+  border: 1px solid#ff0072;
+  height: 80px;
+  padding-bottom: 10px;
+  flex-direction: row;
+  text-align: center;
+  background: #cccccc;
+}
+
+.textarea2 {
+  margin-top: 10px;
+  border: 1px solid#ff0072;
+  height: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  flex-direction: column;
+  text-align: center;
+  background: #cccccc;
+}
+
+.textarea2 textarea {
+  width: 80px;
+}
+
+.textarea3 {
+  margin-top: 10px;
+  border: 1px solid#2ac2ba;
+  height: 120px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  flex-direction: column;
+  text-align: center;
+  background: #cccccc;
+}
+
+.textarea3 textarea {
+  width: 80px;
+}
+
+.image3 {
+  margin-top: 10px;
+  border: 1px solid#2ac2ba;
+  height: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #cccccc;
+}
+
+.image3 img {
+  width: 50px;
+  height: 50px;
+}
+
+.image2field1 {
+  margin-top: 10px;
+  border: 1px solid#2ac2ba;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: #cccccc;
+  text-align: center;
+}
+
+.image2field1 textarea {
+  width: 80px;
+}
+
+.image2field1 img {
+  width: 50px;
+  height: 50px;
+}
+
+.area2field1 {
+  margin-top: 10px;
+  border: 1px solid#2ac2ba;
+  height: 100px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  flex-direction: column;
+  background: #cccccc;
+  text-align: center;
+}
+
+.area2field1 textarea {
+  width: 80px;
+}
+
+.area2image1 {
+  margin-top: 10px;
+  border: 1px solid#2ac2ba;
+  height: 110px;
+  padding-top: 10px;
+  background: #cccccc;
+  padding-bottom: 10px;
+  flex-direction: column;
+  text-align: center;
+}
+
+.area2image1 img {
+  width: 50px;
+  height: 50px;
+}
+
+.area2image1 textarea {
+  width: 80px;
+}
+
+.only-image {
+  background: #cccccc;
+  padding: 20px;
+  margin-top: 10px;
+  border: 1px solid#ff0072;
+  flex-direction: row;
+  text-align: center;
+}
+
+.only-image img {
+  width: 50px;
+  height: 50px;
+}
+
+@media screen and (min-width: 768px) {
+  .dndflow {
+    flex-direction: row;
+  }
+
+  .dndflow aside {
+    width: 20%;
+    max-width: 250px;
+  }
+}
+
+.dndflow aside .name-node {
+  padding-bottom: 15px;
+}
+
+.dndflow aside .image-node {
+  padding-top: 15px;
+}
+
+.dndflow aside .checkboxwrapper {
+  padding-top: 15px;
+}
+
+.modal {
+  font-size: 12px;
+}
+.modal > .header {
+  width: 100%;
+  border-bottom: 1px solid gray;
+  font-size: 18px;
+  text-align: center;
+  padding: 5px;
+}
+.modal > .content {
+  width: 100%;
+  padding: 10px 5px;
+}
+.modal > .actions {
+  width: 100%;
+  padding: 10px 5px;
+  margin: auto;
+  text-align: center;
+}
+.modal > .close {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  padding: 2px 5px;
+  line-height: 20px;
+  right: -10px;
+  top: -10px;
+  font-size: 24px;
+  background: #ffffff;
+  color: black;
+  border-radius: 18px;
+  border: 1px solid #cfcece;
+}
+
+.none {
+  display: none;
+}
+
+.dimensions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
