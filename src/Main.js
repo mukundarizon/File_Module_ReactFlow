@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 import firebaseDb from "./firebase";
 
 const Main = ({ handleToggleSidebar }) => {
-  const [charts, setCharts] = useState({});
+  const [charts, setCharts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -29,6 +29,22 @@ const Main = ({ handleToggleSidebar }) => {
       firebaseDb.child(`charts/${file}`).remove();
     }
   };
+  // const [searchTerm, setSearchTerm] = useState("");
+  // const [searchResults, setSearchResults] = useState([]);
+  // const handleChange = (e) => {
+  //   setSearchTerm(e.target.value);
+  // };
+
+  // useEffect(() => {
+  //   Object.keys(charts).map((id) => {
+  //     if (charts[id].name.includes(searchTerm)) {
+  //       console.log(charts[id].name);
+  //     }
+  //   });
+  //   // const results = asArray.filter((chart) => chart.name.includes(searchTerm));
+  //   // setSearchResults(results);
+  //   // console.log(searchResults);
+  // }, [searchTerm]);
 
   return (
     <main>
@@ -62,9 +78,14 @@ const Main = ({ handleToggleSidebar }) => {
             <span className="add"> Add Custom Node</span>
           </Link>
         </div>
-        <div className="right">
-          <input type="text" placeholder="Search Projects" />
-        </div>
+        {/* <div className="right">
+          <input
+            type="text"
+            placeholder="Search Projects"
+            value={searchTerm}
+            onChange={handleChange}
+          />
+        </div> */}
       </header>
       <div className="main-content">
         {isLoading && <h1 style={{ textAlign: "center" }}>Loading...</h1>}
