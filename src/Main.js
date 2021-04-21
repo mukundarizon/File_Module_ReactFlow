@@ -29,22 +29,26 @@ const Main = ({ handleToggleSidebar }) => {
       firebaseDb.child(`charts/${file}`).remove();
     }
   };
-  // const [searchTerm, setSearchTerm] = useState("");
-  // const [searchResults, setSearchResults] = useState([]);
-  // const handleChange = (e) => {
-  //   setSearchTerm(e.target.value);
-  // };
+  const [searchTerm, setSearchTerm] = useState("");
+  const handleChange = (e) => {
+    setSearchTerm(e.target.value);
+  };
 
-  // useEffect(() => {
-  //   Object.keys(charts).map((id) => {
-  //     if (charts[id].name.includes(searchTerm)) {
-  //       console.log(charts[id].name);
-  //     }
-  //   });
-  //   // const results = asArray.filter((chart) => chart.name.includes(searchTerm));
-  //   // setSearchResults(results);
-  //   // console.log(searchResults);
-  // }, [searchTerm]);
+  useEffect(() => {
+    var filter, ul, li, a, i, txtValue;
+    filter = searchTerm.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+      a = li[i];
+      txtValue = a.textContent || a.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        li[i].style.display = "";
+      } else {
+        li[i].style.display = "none";
+      }
+    }
+  }, [searchTerm]);
 
   return (
     <main>
@@ -78,21 +82,25 @@ const Main = ({ handleToggleSidebar }) => {
             <span className="add"> Add Custom Node</span>
           </Link>
         </div>
-        {/* <div className="right">
+        <div className="right">
           <input
             type="text"
             placeholder="Search Projects"
             value={searchTerm}
             onChange={handleChange}
           />
-        </div> */}
+        </div>
       </header>
-      <div className="main-content">
+      <ul
+        className="main-content"
+        style={{ listStyleType: "none", marginLeft: "-30px" }}
+        id="myUL"
+      >
         {isLoading && <h1 style={{ textAlign: "center" }}>Loading...</h1>}
         {Object.keys(charts).map((id) => {
           var d = new Date(charts[id].date);
           return (
-            <div className="main-content-list" key={id}>
+            <li className="main-content-list" key={id}>
               <div className="title">
                 <Link
                   to={{
@@ -125,10 +133,10 @@ const Main = ({ handleToggleSidebar }) => {
                 </button>
               </div>
               <hr />
-            </div>
+            </li>
           );
         })}
-      </div>
+      </ul>
       <footer>
         <small>Copyright @ 2021 Arizon Systems</small>
       </footer>
