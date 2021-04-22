@@ -25,6 +25,7 @@
     "react-scripts": "^2.0.5",
     "react-switch": "^5.0.1",
     "react-syntax-highlighter": "^15.4.3",
+    "react-use-history-reducer": "^0.1.13",
     "reactjs-popup": "^2.0.4",
     "use-undo": "^1.0.3"
   },

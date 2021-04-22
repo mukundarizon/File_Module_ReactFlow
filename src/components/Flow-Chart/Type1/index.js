@@ -64,6 +64,7 @@ import "reactjs-popup/dist/index.css";
 
 import "./index.css";
 import Sidebar from "./Sidebar";
+import useUndo from "./use-history";
 const nodeTypes = {
   selectorNode: CustomNode,
   customNode: CustomNode2,
@@ -131,8 +132,9 @@ const initialElements = [
 ];
 
 const DnDFlow = () => {
+  const { state, set, undo, redo } = useUndo(initialElements);
   const [reactFlowInstance, setReactFlowInstance] = useState(null);
-  const [elements, setElements, undo] = useUndoState(initialElements);
+  const [elements, setElements] = useState(initialElements);
   const onConnect = (params) =>
     setElements((els) =>
       addEdge({ ...params, animated: true, style: { stroke: "#000" } }, els)
@@ -147,6 +149,12 @@ const DnDFlow = () => {
     event.preventDefault();
     event.dataTransfer.dropEffect = "move";
   };
+
+  // useEffect(() => {
+  //   set({ ...elements });
+  //   console.log(state);
+  //   setElements({ ...state });
+  // }, [elements]);
 
   const reactFlowWrapper = useRef(null);
   // const [countState, { undo: undoCount }] = useUndo(
