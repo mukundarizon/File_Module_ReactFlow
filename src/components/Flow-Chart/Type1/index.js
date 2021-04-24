@@ -12,6 +12,9 @@ import { Link } from "react-router-dom";
 import useEventListener from "@use-it/event-listener";
 import Popup from "reactjs-popup";
 import useUndoState from "@rooks/use-undo-state";
+import * as htmlToImage from "html-to-image";
+import { toPng, toJpeg, toBlob, toPixelData, toSvg } from "html-to-image";
+import { jsPDF } from "jspdf";
 import CustomNode from "../CustomNodes/CustomNode";
 import CustomNode2 from "../CustomNodes/CustomNode2";
 import CustomNode3 from "../CustomNodes/CustomNode3";
@@ -2426,7 +2429,7 @@ const DnDFlow = () => {
     <div className="dndflow" ref={reactFlowWrapper}>
       <ReactFlowProvider>
         <Sidebar />
-        <div className="reactflow-wrapper">
+        <div className="reactflow-wrapper" id="reactflow-wrapper">
           <ReactFlow
             elements={elements}
             onConnect={onConnect}
@@ -2735,6 +2738,67 @@ const DnDFlow = () => {
             >
               Export JSON
             </button>
+          </div>
+          <div className="checkboxwrapper">
+            <Popup
+              trigger={<button className="save"> Export PDF </button>}
+              modal
+              nested
+            >
+              {(close) => (
+                <div className="modal">
+                  <button className="close" onClick={close}>
+                    &times;
+                  </button>
+                  <div className="header"> Download PDF </div>
+                  <div className="content">
+                    <p
+                      style={{
+                        marginLeft: "10px",
+                        marginTop: "10px",
+                        fontSize: "16px",
+                      }}
+                    >
+                      Before clicking on download button to download the pdf
+                      file, make sure you hide the MiniMap for clear picture of
+                      graph only.
+                    </p>
+                  </div>
+                  <div className="actions">
+                    <button
+                      className="button"
+                      onClick={() => {
+                        htmlToImage
+                          .toPng(document.getElementById("reactflow-wrapper"), {
+                            quality: 1,
+                          })
+                          .then(function(dataUrl) {
+                            var link = document.createElement("a");
+                            link.download = "chart.jpeg";
+                            const pdf = new jsPDF();
+                            const imgProps = pdf.getImageProperties(dataUrl);
+                            const pdfWidth = pdf.internal.pageSize.getWidth();
+                            const pdfHeight =
+                              (imgProps.height * pdfWidth) / imgProps.width;
+                            pdf.addImage(
+                              dataUrl,
+                              "PNG",
+                              0,
+                              0,
+                              pdfWidth,
+                              pdfHeight
+                            );
+                            pdf.save("chart.pdf");
+                          });
+                        close();
+                      }}
+                    >
+                      Download
+                    </button>
+                  </div>
+                </div>
+              )}
+            </Popup>
           </div>
         </aside>
       </ReactFlowProvider>
